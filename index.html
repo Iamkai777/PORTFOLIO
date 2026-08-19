@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ermakhan Ongarov - Портфолио</title>
+    <style>
+        /* Общие настройки страницы */
+        body {
+            background-color: #161618;
+            color: #d1d1d6;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow-x: hidden;
+        }
+
+        /* Верхнее меню (Навигация) */
+        nav {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 30px 0;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            z-index: 2;
+        }
+        
+        .nav-left {
+            display: flex;
+            align-items: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #8e8e93;
+            margin: 0 15px;
+            transition: all 0.3s ease-in-out;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            transform: scale(1.1);
+        }
+
+        .nav-right {
+            color: #636366;
+            display: inline-block;
+            transition: all 0.3s ease-in-out;
+            cursor: default;
+        }
+
+        .nav-right:hover {
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Основной контент (Главный экран) */
+        main {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px;
+            margin-bottom: 80px;
+            position: relative;
+            z-index: 1;
+            padding: 40px 0;
+        }
+
+        /* Блок с фотографией */
+        .photo-container {
+            flex: 1;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .photo-container img {
+            max-width: 400px;
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border-radius: 8px;
+            transition: all 0.5s ease-in-out;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        .photo-container img:hover {
+            transform: scale(1.08);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7), 
+                        0 0 30px rgba(255, 193, 7, 0.35);
+        }
+
+        /* Блок с текстом на главном экране */
+        .text-container {
+            flex: 1;
+            padding-left: 50px;
+        }
+
+        .text-container h1 {
+            font-size: 48px;
+            font-weight: 600;
+            margin: 0 0 30px 0;
+            color: #ffffff;
+            transition: all 0.3s ease-in-out;
+            width: fit-content;
+            cursor: default;
+        }
+
+        .text-container h1:hover {
+            transform: scale(1.03);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+        }
+
+        .text-container p {
+            font-size: 20px;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+            color: #aeaeb2;
+            transition: all 0.3s ease-in-out;
+            width: fit-content;
+            cursor: default;
+        }
+
+        .text-container p:hover {
+            color: #ffffff;
+            transform: scale(1.05);
+        }
+
+        /* Секция контента (Education & Experience) — без фонового флага */
+        .section-container {
+            width: 90%;
+            max-width: 1200px;
+            margin-bottom: 100px;
+            display: flex;
+            gap: 60px;
+            position: relative;
+            z-index: 1;
+            padding: 40px 20px;
+        }
+
+        .column {
+            flex: 1;
+        }
+
+        /* Заголовки разделов с иконками */
+        .column h2 {
+            font-size: 26px;
+            color: #ffffff;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2c2c2e;
+            padding-bottom: 10px;
+            width: fit-content;
+            transition: all 0.3s ease-in-out;
+            cursor: default;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .column h2 span.icon {
+            font-size: 24px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .column h2:hover {
+            transform: scale(1.03);
+            color: #ffc107;
+        }
+
+        .column h2:hover span.icon {
+            transform: scale(1.2) rotate(10deg);
+        }
+
+        .item-block {
+            margin-bottom: 30px;
+        }
+
+        .item-title {
+            font-size: 17px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 10px;
+            transition: all 0.3s ease-in-out;
+            width: fit-content;
+            cursor: default;
+        }
+
+        .item-title:hover {
+            transform: scale(1.02);
+            color: #ffc107;
+        }
+
+        .column ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            color: #aeaeb2;
+        }
+
+        .column li {
+            margin-bottom: 8px;
+            line-height: 1.5;
+            font-size: 15px;
+            transition: all 0.3s ease-in-out;
+            cursor: default;
+        }
+
+        .column li:hover {
+            color: #ffffff;
+            transform: translateX(5px);
+        }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            main, .section-container {
+                flex-direction: column;
+            }
+            .text-container {
+                padding-left: 0;
+                margin-top: 30px;
+                text-align: center;
+            }
+            .text-container h1,
+            .text-container p {
+                margin-left: auto;
+                margin-right: auto;
+            }
+            nav {
+                font-size: 12px;
+                padding: 15px 0;
+                flex-direction: column;
+                align-items: center;
+            }
+            .nav-left {
+                margin-bottom: 10px;
+            }
+            .photo-container img {
+                max-width: 300px;
+            }
+            .section-container {
+                gap: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ВЕРХНЕЕ МЕНЮ -->
+    <nav>
+        <div class="nav-left">
+            <a href="#about">about</a>
+            <a href="#project">my project</a>
+            <a href="#contacts">contacts</a>
+        </div>
+        <div class="nav-right">
+            Uzbekistan, Tashkent city
+        </div>
+    </nav>
+
+    <!-- ОСНОВНОЙ КОНТЕНТ (ГЛАВНЫЙ ЭКРАН) -->
+    <main>
+        <div class="photo-container">
+            <img src="myphoto.png" alt="Ermakhan Ongarov">
+        </div>
+
+        <div class="text-container">
+            <h1>Ermakhan Ongarov</h1>
+            <p>We must stand together</p>
+            <p>There's no giving in</p>
+            <p>Hand in hand forever</p>
+            <p>That's when we all win!</p>
+        </div>
+    </main>
+
+    <!-- СЕКЦИЯ: ОБРАЗОВАНИЕ И ОПЫТ РАБОТЫ -->
+    <div class="section-container">
+        
+        <!-- Левая колонка: EDUCATION -->
+        <div class="column">
+            <h2><span class="icon">🎓</span> Education</h2>
+            <div class="item-block">
+                <ul>
+                    <li>Secondary general school 210</li>
+                    <li>Korean education center in Tashkent</li>
+                    <li>Result English learning center</li>
+                    <li>Kimyo International University in Tashkent</li>
+                    <li>Jeonbuk National University (exchange student)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Правая колонка: EXPERIENCE -->
+        <div class="column">
+            <h2><span class="icon">💼</span> Experience</h2>
+            
+            <!-- Опыт 1 -->
+            <div class="item-block">
+                <div class="item-title">Daniel Hill Hotel | Guest Relations & Language Assistant (2022 – 2024)</div>
+                <ul>
+                    <li><strong>Language Facilitation:</strong> Served as a primary language bridge for Korean-speaking guests, providing professional interpretation and translation services.</li>
+                    <li><strong>Cultural Ambassadorship:</strong> Acted as a local guide for guests from South Korea, facilitating city tours and sharing insights on local heritage.</li>
+                    <li><strong>Cross-Cultural Communication:</strong> Managed daily interactions with international clients, fostering positive relationships and satisfaction.</li>
+                    <li><strong>Problem-Solving:</strong> Proactively addressed guest inquiries and resolved communication barriers.</li>
+                </ul>
+            </div>
+
+            <!-- Опыт 2 -->
+            <div class="item-block">
+                <div class="item-title">162 WFK - KOMSTA</div>
+                <ul>
+                    <li><strong>Humanitarian Support:</strong> Collaborated with medical professionals during international outreach programs, facilitating logistical tasks.</li>
+                    <li><strong>Team Collaboration:</strong> Worked closely with a diverse team of professionals in high-pressure environments.</li>
+                    <li><strong>Cross-Cultural Operations:</strong> Assisted in coordinating communication between the medical team and the local community.</li>
+                    <li><strong>Dedication to Public Service:</strong> Contributed to organizing large-scale humanitarian events with a proactive approach.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
