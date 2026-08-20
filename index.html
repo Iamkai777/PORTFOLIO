@@ -287,52 +287,86 @@
         </div>
     </main>
 
-    <!-- СЕКЦИЯ: ОБРАЗОВАНИЕ И ОПЫТ РАБОТЫ -->
-    <div class="section-container">
+<!-- СЕКЦИЯ EDUCATION & EXPERIENCE -->
+<section class="edu-exp-section">
+    <div class="container-grid">
         
-        <!-- Левая колонка: EDUCATION -->
+        <!-- КОЛОНКА: EDUCATION & CERTIFICATES -->
         <div class="column">
-            <h2><span class="icon">🎓</span> Education</h2>
-            <div class="item-block">
-                <ul>
-                    <li>Secondary general school 210</li>
-                    <li>Korean education center in Tashkent</li>
-                    <li>Result English learning center</li>
-                    <li>Kimyo International University in Tashkent</li>
-                    <li>Jeonbuk National University (exchange student)</li>
+            <h2>🎓 Education & Certificates</h2>
+            
+            <div class="card">
+                <h3>Academic Background</h3>
+                <ul class="bullet-list">
+                    <li>Jeonbuk National University — Academic Exchange Student (South Korea)</li>
+                    <li>Secondary General School No. 210 — Graduated</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h3>Certificates & Professional Development</h3>
+                <ul class="bullet-list">
+                    <li>Space Academy — Mobilography & Content Creation Course</li>
+                    <li>Korean Education Center in Tashkent — Advanced Language & Cultural Programs</li>
+                    <li>Result English Learning Center — English Proficiency Course</li>
                 </ul>
             </div>
         </div>
 
-        <!-- Правая колонка: EXPERIENCE -->
+        <!-- КОЛОНКА: EXPERIENCE -->
         <div class="column">
-            <h2><span class="icon">💼</span> Experience</h2>
+            <h2>💼 Experience</h2>
             
-            <!-- Опыт 1 -->
-            <div class="item-block">
-                <div class="item-title">Daniel Hill Hotel | Guest Relations & Language Assistant (2022 – 2024)</div>
-                <ul>
-                    <li><strong>Language Facilitation:</strong> Served as a primary language bridge for Korean-speaking guests, providing professional interpretation and translation services.</li>
-                    <li><strong>Cultural Ambassadorship:</strong> Acted as a local guide for guests from South Korea, facilitating city tours and sharing insights on local heritage.</li>
-                    <li><strong>Cross-Cultural Communication:</strong> Managed daily interactions with international clients, fostering positive relationships and satisfaction.</li>
-                    <li><strong>Problem-Solving:</strong> Proactively addressed guest inquiries and resolved communication barriers.</li>
-                </ul>
+            <div class="card">
+                <h3>Daniel Hill Hotel <span class="role-title">| Guest Relations & Language Assistant (2022 – 2024)</span></h3>
+                <div class="plain-stack">
+                    <p><strong>Multilingual Communication & Translation:</strong> Served as a primary language bridge for Korean-speaking guests, providing professional interpretation and translation services.</p>
+                    <p><strong>Cross-Cultural Coordination:</strong> Acted as a local guide for guests from South Korea, facilitating city tours and sharing insights on local heritage.</p>
+                    <p><strong>Client Relations:</strong> Managed daily interactions with international clients, fostering positive relationships and high satisfaction.</p>
+                    <p><strong>Problem-Solving:</strong> Proactively addressed guest inquiries and resolved complex communication barriers.</p>
+                </div>
             </div>
 
-            <!-- Опыт 2 -->
-            <div class="item-block">
-                <div class="item-title">162 WFK - KOMSTA</div>
-                <ul>
-                    <li><strong>Humanitarian Support:</strong> Collaborated with medical professionals during international outreach programs, facilitating logistical tasks.</li>
-                    <li><strong>Team Collaboration:</strong> Worked closely with a diverse team of professionals in high-pressure environments.</li>
-                    <li><strong>Cross-Cultural Operations:</strong> Assisted in coordinating communication between the medical team and the local community.</li>
-                    <li><strong>Dedication to Public Service:</strong> Contributed to organizing large-scale humanitarian events with a proactive approach.</li>
-                </ul>
+            <div class="card">
+                <h3>162 WFK - KOMSTA</h3>
+                <div class="plain-stack">
+                    <p><strong>Humanitarian Support:</strong> Collaborated with medical professionals during international outreach programs, facilitating logistical and operational tasks.</p>
+                    <p><strong>Team Collaboration:</strong> Worked closely with a diverse team of professionals in high-pressure environments.</p>
+                    <p><strong>Cross-Cultural Communication:</strong> Assisted in coordinating communication between the medical team and the local community.</p>
+                    <p><strong>Project Contribution:</strong> Contributed to organizing large-scale humanitarian events with a proactive and structured approach.</p>
+                </div>
             </div>
-
         </div>
 
     </div>
+</section>
+
+<!-- СТИЛИ ДЛЯ ЭТОЙ СЕКЦИИ -->
+<style>
+    .edu-exp-section { padding: 60px 20px; max-width: 1200px; margin: 0 auto; font-family: 'Inter', sans-serif; color: #f0f0f0; }
+    .container-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    @media (max-width: 768px) { .container-grid { grid-template-columns: 1fr; } }
+    
+    .edu-exp-section h2 { font-size: 28px; font-weight: 700; margin-bottom: 25px; color: #fff; border-bottom: 2px solid rgba(255,255,255,0.1); padding-bottom: 10px; font-family: 'Inter', sans-serif; }
+    
+    .card { background: linear-gradient(to bottom right, #1a1a1a, #262626); border-radius: 15px; padding: 25px; margin-bottom: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.4); border: 1px solid rgba(255,255,255,0.05); transition: 0.3s; }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 15px 35px rgba(0,0,0,0.6); border-color: rgba(255, 255, 255, 0.2); }
+    
+    /* Заголовки карточек теперь белые/светлые, шрифт Inter */
+    .
+    card h3 { font-size: 17px; color: #f5f5f5; margin-top: 0; margin-bottom: 15px; font-weight: 600; font-family: 'Inter', sans-serif; }
+    .role-title { font-size: 13px; color: #999; font-weight: 400; }
+    
+    /* Список с точками для Education */
+    .bullet-list { padding-left: 20px; margin: 0; }
+    .bullet-list li { margin-bottom: 10px; font-size: 14px; color: #bbb; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .bullet-list li strong { color: #fff; }
+    
+    /* Чистый текст без точек для Experience */
+    .plain-stack { display: flex; flex-direction: column; gap: 12px; }
+    .plain-stack p { margin: 0; font-size: 14px; color: #bbb; line-height: 1.5; font-family: 'Inter', sans-serif; }
+    .plain-stack p strong { color: #fff; }
+</style>
 
 </body>
 </html>
