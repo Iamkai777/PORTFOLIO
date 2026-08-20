@@ -336,3 +336,120 @@
 
 </body>
 </html>
+
+<!-- СЕКЦИЯ ПРОЕКТОВ -->
+<section class="projects-section">
+    <h2>Key Projects & Leadership Initiatives</h2>
+    <p class="subtitle">click on + for more information</p>
+
+    <div class="accordion-container">
+        <!-- БЛОК 1 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Educational TV Initiative (Korean Language & Culture)</h3>
+                <div class="header-actions">
+                    <a href="https://youtu.be/LUW5OqXysbI?si=xf9u5Pl7cwKIpWaM" target="_blank" class="link-btn">▶ V1</a>
+                    <a href="https://youtu.be/zTMo8gExdJY?si=OyUCesxKlMObP4FM" target="_blank" class="link-btn">▶ V2</a>
+                    <span class="accordion-icon">+</span>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <p>Co-led a nationwide TV education project, reaching 10,000+ viewers. Beyond content creation, I focused on optimizing educational delivery and facilitating communication between international experts and local students, demonstrating strong organizational and project management skills essential for complex IT workflows.</p>
+            </div>
+        </div>
+
+        <!-- БЛОК 2 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>Exhibition of Korean Universities (Korean Week 2022)</h3>
+                <div class="header-actions">
+                    <span class="accordion-icon">+</span>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <p>Served as a volunteer coordinator, managing communication between international delegates and local students. This role required high attention to detail, real-time problem solving, and effective cross-platform coordination—competencies I am eager to apply to software development and IT project management.</p>
+            </div>
+        </div>
+
+        <!-- БЛОК 3 -->
+        <div class="accordion-item">
+            <div class="accordion-header">
+                <h3>"TOPIK Hunter" Telegram Educational Channel</h3>
+                <div class="header-actions">
+                    <a href="https://t.me/TOPIK_Hunter" target="_blank" class="link-btn">✈ Join</a>
+                    <span class="accordion-icon">+</span>
+                </div>
+            </div>
+            <div class="accordion-content">
+                <p>Founded and currently manage an educational community for Korean language learners. I use this platform to experiment with content delivery, analyze user engagement, and refine information architecture. As an aspiring IT student, I am currently integrating automation tools (Python-based Telegram bots) to scale the channel and improve the learning experience for my subscribers.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- СТИЛИ -->
+<style>
+    .projects-section { padding: 40px; max-width: 800px; margin: 20px auto; background: #222; border-radius: 15px; color: #fff; font-family: sans-serif; }
+    h2 { text-align: center; color: #fff; margin-bottom: 5px; }
+    .subtitle { text-align: center; color: #999; margin-bottom: 30px; font-size: 14px; }
+    .accordion-item { border-bottom: 1px solid #444; }
+    .accordion-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; cursor: pointer; }
+    .accordion-header:hover { background: #333; }
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    .link-btn { padding: 5px 10px; background: #444; color: #fff; text-decoration: none; border-radius: 5px; font-size: 12px; transition: 0.3s; }
+    .link-btn:hover { background: #ffd700; color: #000; }
+    .accordion-icon { font-size: 20px; font-weight: bold; color: #ffd700; transition: 0.3s; }
+    .accordion-content { max-height: 0; overflow: hidden; transition: 0.4s ease; padding: 0 20px; color: #ccc; line-height: 1.6; }
+    .accordion-item.active .accordion-content { max-height: 250px; padding: 15px 20px; }
+    .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+</style>
+<!-- СКРИПТ -->
+<script>
+    document.querySelectorAll('.accordion-header').forEach(header => {
+        header.addEventListener('click', (e) => {
+            if (e.target.closest('.link-btn')) return;
+            header.parentElement.classList.toggle('active');
+        });
+    });
+</script>
+
+<style>
+    .projects-section { padding: 40px; max-width: 800px; margin: 20px auto; background: #222; border-radius: 15px; color: #fff; font-family: sans-serif; }
+    h2 { text-align: center; color: #fff; margin-bottom: 5px; }
+    .subtitle { text-align: center; color: #999; margin-bottom: 30px; font-size: 14px; }
+    
+    .accordion-item { border-bottom: 1px solid #444; transition: all 0.3s ease; border-radius: 8px; }
+    
+    /* Анимация при наведении на весь блок проекта */
+    .accordion-item:hover { 
+        background: #2a2a2a; 
+        transform: scale(1.01); 
+    }
+
+    .accordion-header { display: flex; justify-content: space-between; align-items: center; padding: 20px; cursor: pointer; }
+    
+    .header-actions { display: flex; align-items: center; gap: 10px; }
+    
+    .link-btn { padding: 5px 10px; background: #444; color: #fff; text-decoration: none; border-radius: 5px; font-size: 12px; transition: 0.3s; }
+    .link-btn:hover { background: #ffd700; color: #000; }
+
+    /* Анимация заголовка (цвет и тень при наведении) */
+    .accordion-header h3 { 
+        margin: 0; 
+        font-size: 17px; 
+        color: #eee; 
+        transition: color 0.3s ease, text-shadow 0.3s ease; 
+    }
+    
+    .accordion-item:hover .accordion-header h3 { 
+        color: #ffd700; 
+        text-shadow: 0 0 10px rgba(255, 215, 0, 0.4); 
+    }
+
+    .accordion-icon { font-size: 20px; font-weight: bold; color: #ffd700; transition: transform 0.3s ease, color 0.3s ease; }
+    
+    .accordion-content { max-height: 0; overflow: hidden; transition: max-height 0.4s ease, padding 0.4s ease; padding: 0 20px; color: #ccc; line-height: 1.6; }
+    
+    .accordion-item.active .accordion-content { max-height: 250px; padding: 15px 20px; }
+    .accordion-item.active .accordion-icon { transform: rotate(45deg); }
+</style>
